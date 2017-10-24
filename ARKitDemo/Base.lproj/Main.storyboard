@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2f-MH-9em">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" sceneName="CameraSetup.scn" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6h4-Pg-gdj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="Czi-P6-6bI"/>
+                                </connections>
+                            </arscnView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjr-fQ-4ph">
+                                <rect key="frame" x="15" y="596" width="191" height="38"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PYk-HQ-FTR">
+                                    <rect key="frame" x="0.0" y="0.0" width="191" height="38"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing AR session." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARu-Zj-OU2">
+                                            <rect key="frame" x="8" y="8" width="169" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="Xm8-8U-gmn"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="pBN-f5-vDw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="ARu-Zj-OU2" secondAttribute="bottom" constant="8" id="Efy-lS-qQ5"/>
+                                        <constraint firstItem="ARu-Zj-OU2" firstAttribute="top" secondItem="PYk-HQ-FTR" secondAttribute="top" constant="8" id="SiI-Dl-enB"/>
+                                        <constraint firstAttribute="trailing" secondItem="ARu-Zj-OU2" secondAttribute="trailing" constant="14" id="cwW-HN-5Ti"/>
+                                        <constraint firstItem="ARu-Zj-OU2" firstAttribute="leading" secondItem="PYk-HQ-FTR" secondAttribute="leading" constant="8" id="hLP-18-fnV"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="top" secondItem="6h4-Pg-gdj" secondAttribute="top" id="3m9-mY-XfH"/>
+                            <constraint firstItem="fup-1W-4lj" firstAttribute="trailing" secondItem="6h4-Pg-gdj" secondAttribute="trailing" id="7Lg-Wz-UnZ"/>
+                            <constraint firstItem="bjr-fQ-4ph" firstAttribute="leading" secondItem="fup-1W-4lj" secondAttribute="leading" constant="15" id="9Fn-rx-bJN"/>
+                            <constraint firstItem="6h4-Pg-gdj" firstAttribute="leading" secondItem="fup-1W-4lj" secondAttribute="leading" id="Dha-Qy-jME"/>
+                            <constraint firstItem="fup-1W-4lj" firstAttribute="bottom" secondItem="bjr-fQ-4ph" secondAttribute="bottom" constant="33" id="L8o-P8-cJ8"/>
+                            <constraint firstAttribute="bottom" secondItem="6h4-Pg-gdj" secondAttribute="bottom" id="o9H-se-jJd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fup-1W-4lj"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="6h4-Pg-gdj" id="htv-9J-Ft3"/>
+                        <outlet property="sessionInfoLabel" destination="ARu-Zj-OU2" id="6cs-Ri-CZm"/>
+                        <outlet property="sessionInfoView" destination="bjr-fQ-4ph" id="94T-W5-TQf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
