@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F3523541FA0DBBC00D376AE /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3523531FA0DBBC00D376AE /* WebPageViewController.swift */; };
+		0F3523561FA0E90000D376AE /* ImageIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3523551FA0E90000D376AE /* ImageIO.swift */; };
 		0F7764951F9F92D8006F9061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7764941F9F92D8006F9061 /* AppDelegate.swift */; };
 		0F7764971F9F92D8006F9061 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7764961F9F92D8006F9061 /* art.scnassets */; };
 		0F7764991F9F92D8006F9061 /* AugmentedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7764981F9F92D8006F9061 /* AugmentedInformationViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0F3523531FA0DBBC00D376AE /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
+		0F3523551FA0E90000D376AE /* ImageIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIO.swift; sourceTree = "<group>"; };
 		0F7764911F9F92D8006F9061 /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7764941F9F92D8006F9061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7764961F9F92D8006F9061 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				0F7764B01FA0CC32006F9061 /* placeholder.jpeg */,
+				0F3523551FA0E90000D376AE /* ImageIO.swift */,
 				0F7764941F9F92D8006F9061 /* AppDelegate.swift */,
 				0F7764AC1FA0C537006F9061 /* Extensions.swift */,
 				0F7764AE1FA0C657006F9061 /* MainViewController.swift */,
@@ -160,6 +163,7 @@
 				0F7764991F9F92D8006F9061 /* AugmentedInformationViewController.swift in Sources */,
 				0F7764AD1FA0C537006F9061 /* Extensions.swift in Sources */,
 				0F7764951F9F92D8006F9061 /* AppDelegate.swift in Sources */,
+				0F3523561FA0E90000D376AE /* ImageIO.swift in Sources */,
 				0F3523541FA0DBBC00D376AE /* WebPageViewController.swift in Sources */,
 				0F7764AF1FA0C657006F9061 /* MainViewController.swift in Sources */,
 			);

@@ -69,6 +69,10 @@ class AugmentedInformationViewController: UIViewController, ARSCNViewDelegate, A
 		let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.0)
 		let boxNode = SCNNode(geometry: boxGeometry)
 		boxNode.position = SCNVector3Make(0, 0, -0.5)
+		if let image = ImageIO.loadImage(name: "webpage.png") {
+			print("Found image")
+			scene.background.contents = image
+		}
 		scene.rootNode.addChildNode(boxNode)
 		sceneView.scene = scene
 	}

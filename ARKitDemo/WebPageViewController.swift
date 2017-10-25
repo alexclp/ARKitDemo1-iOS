@@ -28,23 +28,11 @@ class WebPageViewController: UIViewController {
 		
 		view = webView
     }
-
-	private func getDocumentsDirectory() -> URL {
-		let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-		return paths[0]
-	}
-	
-	func saveImage(image: UIImage) {
-		if let data = UIImagePNGRepresentation(image) {
-			let filename = getDocumentsDirectory().appendingPathComponent("webpage.png")
-			try? data.write(to: filename)
-		}
-	}
 	
 	@objc func captureImage() {
 		let image = UIImage(view: view)
 		print(image)
-		saveImage(image: image)
+		ImageIO.saveImage(image: image, name: "webpage.png")
 		_ = self.navigationController?.popViewController(animated: true)
 	}
 }

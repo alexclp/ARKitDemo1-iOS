@@ -25,26 +25,9 @@ class MainViewController: UIViewController {
 		renderedPageImageView.image = placeholderImage
     }
 	
-	func loadImage() -> UIImage? {
-		let nsDocumentDirectory = FileManager.SearchPathDirectory.documentDirectory
-		let nsUserDomainMask = FileManager.SearchPathDomainMask.userDomainMask
-		let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
-		if let dirPath = paths.first {
-			let imageURL = URL(fileURLWithPath: dirPath).appendingPathComponent("webpage.png")
-			print(imageURL)
-			let image = UIImage(contentsOfFile: imageURL.path)
-			if let image = image {
-				return image
-			} else {
-				return nil
-			}
-		}
-		return nil
-	}
-	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		if let image = loadImage() {
+		if let image = ImageIO.loadImage(name: "webpage.png") {
 			renderedPageImageView.image = image
 		}
 	}
