@@ -54,6 +54,26 @@ class AugmentedInformationViewController: UIViewController, ARSCNViewDelegate, A
 		
 		// Show debug UI to view performance metrics (e.g. frames per second).
 		sceneView.showsStatistics = true
+		
+		setupVerticalPane()
+	}
+	
+	func setupVerticalPane() {
+		let scene = SCNScene.init()
+		let boxGeometry = SCNBox(width: 0.1, height: 0.5, length: 0.1, chamferRadius: 0.0)
+		let boxNode = SCNNode(geometry: boxGeometry)
+		
+		if let image = ImageIO.loadImage(name: "webpage.png") {
+			print("Setting image")
+			let material = SCNMaterial()
+//			material.diffuse.contents = UIColor(patternImage: image)
+			material.diffuse.contents = image
+			boxNode.geometry?.materials = [material]
+		}
+		
+		boxNode.position = SCNVector3Make(0, 0, -0.5)
+		scene.rootNode.addChildNode(boxNode)
+		sceneView.scene = scene
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
@@ -65,16 +85,7 @@ class AugmentedInformationViewController: UIViewController, ARSCNViewDelegate, A
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let scene = SCNScene.init()
-		let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.0)
-		let boxNode = SCNNode(geometry: boxGeometry)
-		boxNode.position = SCNVector3Make(0, 0, -0.5)
-		if let image = ImageIO.loadImage(name: "webpage.png") {
-			print("Found image")
-			scene.background.contents = image
-		}
-		scene.rootNode.addChildNode(boxNode)
-		sceneView.scene = scene
+
 	}
 	
 	// MARK: - ARSCNViewDelegate

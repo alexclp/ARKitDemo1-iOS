@@ -23,14 +23,11 @@ class MainViewController: UIViewController {
 		
 		let placeholderImage = UIImage(named: "placeholder.jpeg")
 		renderedPageImageView.image = placeholderImage
-    }
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
+		
 		if let image = ImageIO.loadImage(name: "webpage.png") {
 			renderedPageImageView.image = image
 		}
-	}
+    }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "showWebControllerSegue" {
