@@ -48,4 +48,13 @@ class MainViewController: UIViewController {
 			renderedPageImageView.image = image
 		}
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "showWebControllerSegue" {
+			let destination = segue.destination as! WebPageViewController
+			if let text = pageAddressTextField.text {
+				destination.addressToLoad = text
+			}
+		}
+	}
 }

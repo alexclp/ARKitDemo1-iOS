@@ -11,6 +11,7 @@ import WebKit
 
 class WebPageViewController: UIViewController {
 	var webView: WKWebView!
+	var addressToLoad = String()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,10 @@ class WebPageViewController: UIViewController {
 		let webConfiguration = WKWebViewConfiguration()
 		webView = WKWebView(frame: view.frame, configuration: webConfiguration)
 		webView.navigationDelegate = self
-		let myRequest = URLRequest(url: URL.init(string: "https://apple.com")!)
+		var myRequest = URLRequest(url: URL.init(string: "https://apple.com")!)
+		if addressToLoad != "" {
+			myRequest = URLRequest(url: URL.init(string: addressToLoad)!)
+		}
 		webView.load(myRequest)
 		
 		view = webView

@@ -28,7 +28,7 @@
                                 <rect key="frame" x="110" y="249" width="154" height="30"/>
                                 <state key="normal" title="Render web page"/>
                                 <connections>
-                                    <segue destination="6cw-OG-ABC" kind="show" id="Ui9-hb-G5g"/>
+                                    <segue destination="6cw-OG-ABC" kind="show" identifier="showWebControllerSegue" id="Ui9-hb-G5g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZ1-zL-CFQ">
