@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
+class AugmentedInformationViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 	// MARK: - IBOutlets
 	
 	@IBOutlet weak var sessionInfoView: UIView!
@@ -61,6 +61,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
 		
 		// Pause the view's AR session.
 		sceneView.session.pause()
+	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		let scene = SCNScene.init()
+		let boxGeometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.0)
+		let boxNode = SCNNode(geometry: boxGeometry)
+		boxNode.position = SCNVector3Make(0, 0, -0.5)
+		scene.rootNode.addChildNode(boxNode)
+		sceneView.scene = scene
 	}
 	
 	// MARK: - ARSCNViewDelegate
