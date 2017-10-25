@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3523541FA0DBBC00D376AE /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3523531FA0DBBC00D376AE /* WebPageViewController.swift */; };
 		0F7764951F9F92D8006F9061 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7764941F9F92D8006F9061 /* AppDelegate.swift */; };
 		0F7764971F9F92D8006F9061 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7764961F9F92D8006F9061 /* art.scnassets */; };
 		0F7764991F9F92D8006F9061 /* AugmentedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7764981F9F92D8006F9061 /* AugmentedInformationViewController.swift */; };
@@ -14,9 +15,13 @@
 		0F77649E1F9F92D8006F9061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F77649D1F9F92D8006F9061 /* Assets.xcassets */; };
 		0F7764A11F9F92D8006F9061 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F77649F1F9F92D8006F9061 /* LaunchScreen.storyboard */; };
 		0F7764A91F9FAC93006F9061 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7764A81F9FAC93006F9061 /* Assets.scnassets */; };
+		0F7764AD1FA0C537006F9061 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7764AC1FA0C537006F9061 /* Extensions.swift */; };
+		0F7764AF1FA0C657006F9061 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7764AE1FA0C657006F9061 /* MainViewController.swift */; };
+		0F7764B11FA0CC32006F9061 /* placeholder.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0F7764B01FA0CC32006F9061 /* placeholder.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3523531FA0DBBC00D376AE /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
 		0F7764911F9F92D8006F9061 /* ARKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7764941F9F92D8006F9061 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7764961F9F92D8006F9061 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		0F7764A01F9F92D8006F9061 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F7764A21F9F92D8006F9061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F7764A81F9FAC93006F9061 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
+		0F7764AC1FA0C537006F9061 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0F7764AE1FA0C657006F9061 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F7764B01FA0CC32006F9061 /* placeholder.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +66,14 @@
 		0F7764931F9F92D8006F9061 /* ARKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0F7764B01FA0CC32006F9061 /* placeholder.jpeg */,
 				0F7764941F9F92D8006F9061 /* AppDelegate.swift */,
-				0F7764961F9F92D8006F9061 /* art.scnassets */,
+				0F7764AC1FA0C537006F9061 /* Extensions.swift */,
+				0F7764AE1FA0C657006F9061 /* MainViewController.swift */,
+				0F3523531FA0DBBC00D376AE /* WebPageViewController.swift */,
 				0F7764981F9F92D8006F9061 /* AugmentedInformationViewController.swift */,
 				0F77649A1F9F92D8006F9061 /* Main.storyboard */,
+				0F7764961F9F92D8006F9061 /* art.scnassets */,
 				0F77649D1F9F92D8006F9061 /* Assets.xcassets */,
 				0F7764A81F9FAC93006F9061 /* Assets.scnassets */,
 				0F77649F1F9F92D8006F9061 /* LaunchScreen.storyboard */,
@@ -130,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F7764971F9F92D8006F9061 /* art.scnassets in Resources */,
+				0F7764B11FA0CC32006F9061 /* placeholder.jpeg in Resources */,
 				0F7764A91F9FAC93006F9061 /* Assets.scnassets in Resources */,
 				0F7764A11F9F92D8006F9061 /* LaunchScreen.storyboard in Resources */,
 				0F77649E1F9F92D8006F9061 /* Assets.xcassets in Resources */,
@@ -145,7 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F7764991F9F92D8006F9061 /* AugmentedInformationViewController.swift in Sources */,
+				0F7764AD1FA0C537006F9061 /* Extensions.swift in Sources */,
 				0F7764951F9F92D8006F9061 /* AppDelegate.swift in Sources */,
+				0F3523541FA0DBBC00D376AE /* WebPageViewController.swift in Sources */,
+				0F7764AF1FA0C657006F9061 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

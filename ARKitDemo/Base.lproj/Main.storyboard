@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q9u-ZZ-i4m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="kjv-oK-24W">
+            <objects>
+                <viewController id="sTW-Dx-T12" customClass="MainViewController" customModule="ARKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jMT-Dz-B88">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://alexandruclapa.com" borderStyle="roundedRect" placeholder="Webpage address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMH-z7-m84">
+                                <rect key="frame" x="16" y="168" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTJ-69-yof">
+                                <rect key="frame" x="110" y="249" width="154" height="30"/>
+                                <state key="normal" title="Render web page"/>
+                                <connections>
+                                    <segue destination="6cw-OG-ABC" kind="show" id="Ui9-hb-G5g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZ1-zL-CFQ">
+                                <rect key="frame" x="155" y="211" width="62" height="30"/>
+                                <state key="normal" title="Show AR"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="S6b-kG-LRd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hb0-82-uQz">
+                                <rect key="frame" x="0.0" y="406" width="375" height="261"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="261" id="BE8-ai-xFh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NZ1-zL-CFQ" firstAttribute="leading" secondItem="e2H-yZ-iro" secondAttribute="leading" constant="155" id="4RS-bq-Fcq"/>
+                            <constraint firstItem="NZ1-zL-CFQ" firstAttribute="top" secondItem="tMH-z7-m84" secondAttribute="bottom" constant="13" id="Av2-AS-T9g"/>
+                            <constraint firstItem="tMH-z7-m84" firstAttribute="top" secondItem="e2H-yZ-iro" secondAttribute="top" constant="104" id="B3D-jv-4ai"/>
+                            <constraint firstItem="hb0-82-uQz" firstAttribute="bottom" secondItem="e2H-yZ-iro" secondAttribute="bottom" id="OYg-3Z-J7O"/>
+                            <constraint firstItem="rTJ-69-yof" firstAttribute="centerX" secondItem="hb0-82-uQz" secondAttribute="centerX" id="TOh-wh-PFJ"/>
+                            <constraint firstItem="rTJ-69-yof" firstAttribute="top" secondItem="NZ1-zL-CFQ" secondAttribute="bottom" constant="8" symbolic="YES" id="Vbw-rx-ZTz"/>
+                            <constraint firstItem="rTJ-69-yof" firstAttribute="leading" secondItem="e2H-yZ-iro" secondAttribute="leading" constant="110" id="Yrm-k8-1fY"/>
+                            <constraint firstAttribute="trailing" secondItem="hb0-82-uQz" secondAttribute="trailing" id="aZf-9d-QDP"/>
+                            <constraint firstItem="tMH-z7-m84" firstAttribute="leading" secondItem="jMT-Dz-B88" secondAttribute="leadingMargin" id="dW3-HJ-EhR"/>
+                            <constraint firstItem="tMH-z7-m84" firstAttribute="centerX" secondItem="rTJ-69-yof" secondAttribute="centerX" id="dwe-iY-ZhC"/>
+                            <constraint firstItem="hb0-82-uQz" firstAttribute="leading" secondItem="jMT-Dz-B88" secondAttribute="leading" id="f00-4V-eur"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e2H-yZ-iro"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Ey-CS-eaL"/>
+                    <connections>
+                        <outlet property="pageAddressTextField" destination="tMH-z7-m84" id="fpD-0Z-EYl"/>
+                        <outlet property="renderedPageImageView" destination="hb0-82-uQz" id="Ic6-fP-LxV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUv-EN-cbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399.19999999999999" y="31.934032983508249"/>
+        </scene>
+        <!--Web Page View Controller-->
+        <scene sceneID="Dob-Pe-bgE">
+            <objects>
+                <viewController id="6cw-OG-ABC" customClass="WebPageViewController" customModule="ARKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SAX-q2-Fas">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9xm-zN-jY4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DtL-Df-A83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="884"/>
+        </scene>
         <!--Augmented Information View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -74,6 +151,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="372" y="31.934032983508249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pYZ-SV-6Vl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q9u-ZZ-i4m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xM3-KR-n6z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sTW-Dx-T12" kind="relationship" relationship="rootViewController" id="LHp-kM-ht1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Snm-VR-UUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1265" y="32"/>
         </scene>
     </scenes>
 </document>
