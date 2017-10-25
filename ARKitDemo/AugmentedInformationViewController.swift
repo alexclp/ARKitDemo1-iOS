@@ -66,7 +66,6 @@ class AugmentedInformationViewController: UIViewController, ARSCNViewDelegate, A
 		if let image = ImageIO.loadImage(name: "webpage.png") {
 			print("Setting image")
 			let material = SCNMaterial()
-//			material.diffuse.contents = UIColor(patternImage: image)
 			material.diffuse.contents = image
 			boxNode.geometry?.materials = [material]
 		}
